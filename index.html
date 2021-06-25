@@ -87,7 +87,7 @@
                 </div>
                 <div class="wrap-contact100-form-btn">
                     <div class="contact100-form-bgbtn"></div>
-                    <button type="button" class="contact100-form-btn" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="contact100-form-btn" onclick="invoidce()" data-toggle="modal" data-target="#invoice">
 						IN HÓA ĐƠN
 					</button>
                 </div>
@@ -101,7 +101,61 @@
             </div>
         </div>
     </div>
+    <!-- Modal Order-->
+    <div class="modal fade" id="invoice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
+        <div class="modal-dialog" role="document" style="max-width: 650px !important;">
+            <div class="modal-content" style="padding: 20px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Chi tiết hóa đơn</strong></h3>
+                    </div>
+                    <div class="panel-body invoice">
+                        <div class="table-responsive">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <td class="text-uppercase"><strong>Chi tiết</strong></td>
+                                        <td class="text-center text-uppercase"><strong>Sử dụng</strong></td>
+                                        <td class="text-center text-uppercase"><strong>Đơn giá(1000đ)</strong></td>
+                                        <td class="text-right text-uppercase"><strong>thành tiền</strong></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="invoice__item" data-object="first-kilometer">
+                                        <td class="text-uppercase">km đầu tiên</td>
+                                        <td class="text-center"></td>
+                                        <td class="text-center"></td>
+                                        <td class="text-right"></td>
+                                    </tr>
+                                    <tr class="invoice__item" data-object="distance">
+                                        <td>Từ Hà Nội đến Tp.HCM</td>
+                                        <td class="text-center"></td>
+                                        <td class="text-center"></td>
+                                        <td class="text-right"></td>
+                                    </tr>
+                                    <tr class="invoice__item" data-object="waitTimes">
+                                        <td>Thời Gian Chờ</td>
+                                        <td class="text-center">1</td>
+                                        <td class="text-center"></td>
+                                        <td class="text-right"></td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td class="no-line"></td>
+                                        <td class="no-line"></td>
+                                        <td class="no-line text-center text-uppercase"><strong>Tổng Tiền</strong></td>
+                                        <td class="no-line text-right totalMoney"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--===============================================================================================-->
     <script src="./vendor/jquery/jquery.min.js"></script>
@@ -113,8 +167,8 @@
     <!--===============================================================================================-->
 
 
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script> -->
-    <!-- <script src="./js/map-custom.js"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+    <script src="./js/map-custom.js"></script>
     <!--===============================================================================================-->
 
     <!-- main -->
