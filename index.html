@@ -66,17 +66,18 @@
             <div style="clear:both;"></div>
 
             <form class="contact100-form">
-                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                <div class="wrap-input100 validate-input kilometers-form" data-validate="Name is required">
                     <h2>Nhập vào số KM </h2>
-                    <input class="input100" id="kilometers" type="number" name="name" placeholder="Số KM ...">
-                    <span class="focus-input100"></span>
+                    <input class="input100" id="kilometers" autocomplete="off" type="number" oninput="checkNegative(this)" name="name" placeholder="Số KM ...">
+                    <span class="focus-input100"><div class="line"></div></span>
+                    <i class="errorNumber" style="font-size: 20px;color: red;display: none;">* giá trị nhập vào không được âm *</i>
 
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                <div class="wrap-input100 validate-input WaitTimes-form" data-validate="Name is required">
                     <h2>Nhập thời gian chờ </h2>
-                    <input class="input100" id="WaitTimes" type="number" name="name" placeholder="Thời gian chờ  ...">
-                    <span class="focus-input100"></span>
-
+                    <input class="input100" id="WaitTimes" autocomplete="off" type="number" oninput="checkNegative(this)" name="name" placeholder="Thời gian chờ  ...">
+                    <span class="focus-input100"><div class="line"></div></span>
+                    <i class="errorNumber" style="font-size: 20px;color: red;display: none">* giá trị nhập vào không được âm *</i>
                 </div>
 
                 <div class="wrap-contact100-form-btn">
@@ -90,6 +91,9 @@
                     <button type="button" class="contact100-form-btn" onclick="invoidce()" data-toggle="modal" data-target="#invoice">
 						IN HÓA ĐƠN
 					</button>
+                </div>
+                <div class="w-100">
+                    <strong class="text-center errInput" style="display: none;margin-top: 30px;font-size: 20px;color: red;">Giá trị nhập vào bị trống hoặc không đúng</strong>
                 </div>
             </form>
 
@@ -136,7 +140,7 @@
                                     </tr>
                                     <tr class="invoice__item" data-object="waitTimes">
                                         <td>Thời Gian Chờ</td>
-                                        <td class="text-center">1</td>
+                                        <td class="text-center"></td>
                                         <td class="text-center"></td>
                                         <td class="text-right"></td>
                                     </tr>

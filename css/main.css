@@ -289,8 +289,7 @@ iframe {
     pointer-events: none;
 }
 
-.focus-input100::before {
-    content: "";
+.focus-input100>.line {
     display: block;
     position: absolute;
     bottom: -2px;
@@ -321,11 +320,11 @@ textarea.input100 {
     padding-bottom: 13px;
 }
 
-.input100:focus+.focus-input100::before {
+.input100:focus+.focus-input100 .line {
     width: 100%;
 }
 
-.has-val.input100+.focus-input100::before {
+.has-val.input100+.focus-input100 .line {
     width: 100%;
 }
 
